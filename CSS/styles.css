@@ -1,7 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Oswald:wght@300&display=swap");
 
 body {
-  background-image: url(/images/early-morning.png);
+  background-image: url(../images/early-morning.png);
   background-position: center center;
   background-repeat: no-repeat;
   background-attachment: fixed;
