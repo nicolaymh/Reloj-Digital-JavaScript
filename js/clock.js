@@ -56,10 +56,10 @@ setInterval(hour, 1000);
 /* obtaining wallpaper according to the time of day */
 const backgroundImage = (time) => {
     let changeBackground = document.getElementById(`background`);
-    const morning = `url(./images/morning.png)`;
-    const afternoon = `url(./images/afternoon.png)`;
-    const night = `url(./images/night.png)`;
-    const early_morning = `url(./images/early-morning.png)`;
+    const morning = `url(../images/morning.png)`;
+    const afternoon = `url(../images/afternoon.png)`;
+    const night = `url(../images/night.png)`;
+    const early_morning = `url(../images/early-morning.png)`;
 
     return time >= 6 && time < 12
         ? (changeBackground.style.backgroundImage = morning)
