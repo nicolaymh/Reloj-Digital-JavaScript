@@ -42,15 +42,18 @@ const hour = () => {
     /* changing background according to the time */
     backgroundImage(hour);
 
-    document.getElementById(`time`).innerHTML = `${hour}: ${minutes}: ${seconds}`;
+    document.getElementById(
+        `time`,
+    ).innerHTML = `${hour}: ${minutes}: ${seconds}`;
 
     let ordinalNumber = ordinalDate(timeNow.getDate());
-    let dateNow = `${days[timeNow.getDay()]}, ${months[timeNow.getMonth()]
-        } ${timeNow.getDate()}${ordinalNumber}, ${timeNow.getFullYear()}`;
+    let dateNow = `${days[timeNow.getDay()]}, ${
+        months[timeNow.getMonth()]
+    } ${timeNow.getDate()}${ordinalNumber}, ${timeNow.getFullYear()}`;
     document.getElementById(`date`).innerHTML = dateNow;
 
-    document.getElementById(`container-clock`).classList.toggle(`encourage`);    
-}
+    document.getElementById(`container-clock`).classList.toggle(`encourage`);
+};
 setInterval(hour, 1000);
 
 /* obtaining wallpaper according to the time of day */
@@ -64,10 +67,10 @@ const backgroundImage = (time) => {
     return time >= 6 && time < 12
         ? (changeBackground.style.backgroundImage = morning)
         : time >= 12 && time < 19
-            ? (changeBackground.style.backgroundImage = afternoon)
-            : time >= 19 && time < 24
-                ? (changeBackground.style.backgroundImage = night)
-                : (changeBackground.style.backgroundImage = early_morning);
+        ? (changeBackground.style.backgroundImage = afternoon)
+        : time >= 19 && time < 24
+        ? (changeBackground.style.backgroundImage = night)
+        : (changeBackground.style.backgroundImage = early_morning);
 };
 
 /* get cardinal number termination */
